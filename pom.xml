@@ -42,6 +42,19 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.vst</groupId>
+            <artifactId>converter</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/MusicXMLToIRealLib-1.0-SNAPSHOT.jar</systemPath>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.jdom/jdom2 -->
+        <dependency>
+            <groupId>org.jdom</groupId>
+            <artifactId>jdom2</artifactId>
+            <version>2.0.6.1</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -64,7 +77,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>vst.musicxmltoirealgui/vst.musicxmltoirealgui.HelloApplication</mainClass>
+                            <mainClass>vst.musicxmltoirealgui/vst.musicxmltoirealgui.Main</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
